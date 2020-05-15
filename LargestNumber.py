@@ -1,29 +1,32 @@
 """
 R. Scott Harrington
-This program repeatedly prompts a user for integer numbers until the user enters
-'done'. Once 'done' is entered, prints out the largest of the numbers. 
 05/15/2020
+
+Repeatedly prompt a user for integers until the user enters '-1'. Once '-1' is
+entered, print out the largest/smallest of numbers. 
+
 """
 # -*- coding: utf-8 -*-
+
+import math
 
 numList = []		# empty list to hold input
 notDone = True		# bool to determine done or not
 
 while notDone:
-	num = input("Enter a number (done to exit): ")
-	numList.append(num)
-	if num == 'done' :
-		numList.pop(len(numList) - 1)		# remove 'done' from list
+	num = input("Enter a number ('-1' to exit): ")
+	numList.append(int(num))				# convert input to integer + add
+	if num == '-1' :
+		numList.pop(len(numList) - 1)		# remove '-1' from list
 		#sanity check
 		print('All done! Calculating stuff below\n')
 		break
 	else :
 		print('Not done... keep going')
 
-print('This is your list', numList)
+print('This is your list', sorted(numList))
 
-largest = None
-for newNum in numList :
-	if largest is None or newNum > largest :
-		largest = newNum
-print('Largest', largest)
+largest = max(numList)
+smallest = min(numList)
+print('Largest:', largest)
+print('Smallest:', smallest)
