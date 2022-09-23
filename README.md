@@ -1,5 +1,5 @@
 # README
 
-Current as of:  format(Sys.time(), '%d %B, %Y')
+Current as of:  `Sys.Date()`
 
 Place to hold Python projects that I am working on
