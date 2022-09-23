@@ -1,5 +1,5 @@
 # README
 
-Current as of:  5/15/2020
+Current as of:  "`r format(Sys.time(), '%d %B, %Y')`"
 
 Place to hold Python projects that I am working on
